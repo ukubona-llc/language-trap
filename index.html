@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukubona · The False Geodesic</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400;500&display=swap');
+        
+        :root {
+            --bg: #08080D; --surface: #0F0F18; --surface2: #16161F;
+            --border: #1E1E2E; --amber: #F59E0B; --text: #E8E8F0;
+            --muted: #7070A0; --red: #F87171; --blue: #60A5FA;
+        }
+        [data-theme="light"] {
+            --bg: #F2F0EA; --surface: #FFFFFF; --surface2: #EDEAE2;
+            --border: rgba(0,0,0,0.1); --text: #18160F; --muted: #6B6555;
+        }
+
+        body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; margin: 0; transition: 0.3s; }
+        
+        /* Nav & Spinning Logo */
+        .site-nav { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 1rem 2rem; display: flex; align-items: center; gap: 1rem; }
+        .logo-wrap { width: 32px; height: 32px; position: relative; }
+        .logo-wrap img { width: 100%; height: 100%; animation: spin 20s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        .theme-btn { margin-left: auto; cursor: pointer; background: var(--surface2); border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 20px; color: var(--muted); font-family: 'DM Mono'; font-size: 0.7rem; }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        h1 { font-family: 'DM Serif Display', serif; font-size: 3rem; margin-bottom: 1rem; }
+        
+        /* Video Embed */
+        .video-wrapper { margin: 2rem 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* Pentad Grid */
+        .pentad { display: grid; gap: 1.5rem; margin-top: 3rem; }
+        .step { padding: 1.5rem; border-left: 3px solid var(--amber); background: var(--surface2); }
+        .step-label { font-family: 'DM Mono'; font-size: 0.7rem; color: var(--amber); display: block; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <div class="logo-wrap">
+        <img src="https://abikesa.github.io/logos/assets/ukubona-dark.png" alt="Ukubona"/>
+    </div>
+    <div style="font-family: var(--serif); font-weight: bold;">Ukubona</div>
+    <button class="theme-btn" id="theme-btn">Toggle Theme</button>
+</nav>
+
+<div class="container">
+    <h1>The False Geodesic &<br><em>Biological Sex</em></h1>
+    
+    <!-- Corrected Video Embed -->
+    <div class="video-wrapper">
+        <div class="video-container">
+            <iframe src="https://www.youtube-nocookie.com/embed/XBJqCN_FxGA" title="Supreme Court Decision" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="pentad">
+        <div class="step">
+            <span class="step-label">01. TENSOR (Continuous Manifold)</span>
+            <p>Gender and sex are expressions of a high-dimensional continuous variable. The fundamental reality is a continuum of hormone concentrations during embryological phases.</p>
+        </div>
+        <div class="step">
+            <span class="step-label">02. MATRIX (Discretization)</span>
+            <p>Society demands intelligibility. The birth certificate is a lossy coordinate chart forcing a complex, continuous signal into a binary state (0, 1). This is administrative convenience, not biological truth.</p>
+        </div>
+        <div class="step">
+            <span class="step-label">03. VECTOR (Judicial Jacobian)</span>
+            <p>The Supreme Court utilizes the Jacobian of "originalism." By anchoring legal interpretation to 1972, they force a legacy binary script onto an incompatible high-dimensional biological operating system.</p>
+        </div>
+        <div class="step">
+            <span class="step-label">04. EIGENMODE (The Anomaly)</span>
+            <p>The 13-year-old patient who was "perfectly ambiguous" is the system anomaly. The binary grid failed; the reality was outside the coordinate system, exposing the structural failure of the discretization method.</p>
+        </div>
+        <div class="step">
+            <span class="step-label">05. SCALAR (Administrative Wreckage)</span>
+            <p>The legal system is a low-bitrate filter. It will continue to produce wreckage as long as it confuses the historical index (the code base) with the actual high-resolution reality of the human condition.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById('theme-btn');
+    btn.addEventListener('click', () => {
+        const html = document.documentElement;
+        html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+</script>
+</body>
+</html>
